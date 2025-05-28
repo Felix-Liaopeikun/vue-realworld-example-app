@@ -40,7 +40,7 @@ importers:
         specifier: ^7.6.2
         version: 7.27.2(@babel/core@7.27.3)
       '@vue/cli-plugin-babel':
-        specifier: ^3.12.0
+        specifier: ^3.12.1
         version: 3.12.1(vue@2.7.16)
       '@vue/cli-plugin-eslint':
         specifier: ^3.10.0
@@ -52,7 +52,7 @@ importers:
         specifier: ^3.10.0
         version: 3.12.1(babel-core@7.0.0-bridge.0(@babel/core@7.27.3))(vue-template-compiler@2.7.16)(vue@2.7.16)
       '@vue/cli-service':
-        specifier: ^3.10.0
+        specifier: ^3.12.1
         version: 3.12.1(babel-core@7.0.0-bridge.0(@babel/core@7.27.3))(handlebars@4.7.8)(lodash@4.17.21)(prettier@1.19.1)(vue-template-compiler@2.7.16)
       '@vue/eslint-config-prettier':
         specifier: ^4.0.1
@@ -66,6 +66,9 @@ importers:
       babel-jest:
         specifier: ^24.9.0
         version: 24.9.0(@babel/core@7.27.3)
+      cache-loader:
+        specifier: ^4.1.0
+        version: 4.1.0(webpack@4.47.0)
       cross-env:
         specifier: ^6.0.3
         version: 6.0.3
@@ -1557,6 +1560,9 @@ packages:
   buffer-indexof@1.1.1:
     resolution: {integrity: sha512-4/rOEg86jivtPTeOUUT61jJO1Ya1TrR/OkqCSZDyq84WJh3LuuiphBYJN+fm5xufIk4XAFcEwte/8WzC8If/1g==}
 
+  buffer-json@2.0.0:
+    resolution: {integrity: sha512-+jjPFVqyfF1esi9fvfUs3NqM0pH1ziZ36VP4hmA/y/Ssfo/5w5xHKfTw9BwQjoJ1w/oVtpLomqwUHKdefGyuHw==}
+
   buffer-xor@1.0.3:
     resolution: {integrity: sha512-571s0T7nZWK6vB67HI5dyUF7wXiNcfaPPPTl6zYCNApANjIvYJTg7hlud/+cJpdAhS7dVzqMLmfhfHR3rAcOjQ==}
 
@@ -1583,6 +1589,12 @@ packages:
   cache-loader@2.0.1:
     resolution: {integrity: sha512-V99T3FOynmGx26Zom+JrVBytLBsmUCzVG2/4NnUKgvXN4bEV42R1ERl1IyiH/cvFIDA1Ytq2lPZ9tXDSahcQpQ==}
     engines: {node: '>= 6.9.0'}
+    peerDependencies:
+      webpack: ^4.0.0
+
+  cache-loader@4.1.0:
+    resolution: {integrity: sha512-ftOayxve0PwKzBF/GLsZNC9fJBXl8lkZE3TOsjkboHfVHVkL39iUEs1FO07A33mizmci5Dudt38UZrrYXDtbhw==}
+    engines: {node: '>= 8.9.0'}
     peerDependencies:
       webpack: ^4.0.0
 
@@ -8859,6 +8871,8 @@ snapshots:
 
   buffer-indexof@1.1.1: {}
 
+  buffer-json@2.0.0: {}
+
   buffer-xor@1.0.3: {}
 
   buffer@4.9.2:
@@ -8924,6 +8938,16 @@ snapshots:
       neo-async: 2.6.2
       normalize-path: 3.0.0
       schema-utils: 1.0.0
+      webpack: 4.47.0
+
+  cache-loader@4.1.0(webpack@4.47.0):
+    dependencies:
+      buffer-json: 2.0.0
+      find-cache-dir: 3.3.2
+      loader-utils: 1.4.2
+      mkdirp: 0.5.6
+      neo-async: 2.6.2
+      schema-utils: 2.7.1
       webpack: 4.47.0
 
   caching-transform@3.0.2:
